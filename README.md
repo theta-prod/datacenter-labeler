@@ -6,8 +6,8 @@
 
 
 # 啟動腳本
-1. build
-2. up
-3. down
+```
+  sudo docker-compose --build -d
+```
 
 
