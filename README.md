@@ -7,7 +7,7 @@
 
 # 啟動腳本
 ```
-  sudo docker-compose --build -d
+  sudo docker-compose up --build -d 
 ```
 
 
