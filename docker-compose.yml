@@ -16,6 +16,7 @@ services:
       ALLOW_SIGNUP: "False"
       DEBUG: "False"
       DJANGO_SETTINGS_MODULE: "config.settings.production"
+    commond: "doccano createuser --username user --password user & /doccano/tools/run.sh"
     depends_on:
       - postgres
     networks:
