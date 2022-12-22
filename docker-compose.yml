@@ -2,10 +2,7 @@ version: "3.7"
 services:
 
   backend:
-    build:
-      context: .
-      dockerfile: Dockerfile.prod
-    image: doccano_backend:prod
+    image: doccano/doccano:backend
     deploy:
       resources:
         limits:
