@@ -31,9 +31,9 @@ services:
       - network-frontend
 
   celery:
-    build:
-      context: .
-      dockerfile: Dockerfile.prod
+    #build:
+    #  context: .
+    #  dockerfile: Dockerfile.prod
     image: doccano_celery:prod
     deploy:
       resources:
