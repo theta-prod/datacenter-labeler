@@ -34,7 +34,8 @@ services:
     #build:
     #  context: .
     #  dockerfile: Dockerfile.prod
-    image: doccano_celery:prod
+    #image: doccano_celery:prod
+    image: celery
     deploy:
       resources:
         limits:
