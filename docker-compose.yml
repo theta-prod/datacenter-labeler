@@ -75,7 +75,7 @@ services:
       context: .
       dockerfile: Dockerfile.nginx
     restart: always
-    depoly:
+    deploy:
       resources:
         limits:
           memory: 512M
