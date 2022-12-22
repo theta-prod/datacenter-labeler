@@ -6,6 +6,10 @@ services:
       context: .
       dockerfile: Dockerfile.prod
     image: doccano_backend:prod
+    deploy:
+      resources:
+        limits:
+          memory: 1024M
     restart: always
     volumes:
       - static_volume:/backend/staticfiles
@@ -31,6 +35,10 @@ services:
       context: .
       dockerfile: Dockerfile.prod
     image: doccano_celery:prod
+    deploy:
+      resource:
+        limits:
+          memory: 512M
     restart: always
     volumes:
       - media:/backend/media
@@ -50,11 +58,15 @@ services:
   rabbitmq:
     image: rabbitmq:3.8-alpine
     restart: always
+    deploy:
+      resources:
+        limits:
+          memory: 512M
     environment:
       RABBITMQ_DEFAULT_USER: "${RABBITMQ_DEFAULT_USER}"
       RABBITMQ_DEFAULT_PASS: "${RABBITMQ_DEFAULT_PASS}"
-    ports:
-      - 5672:5672
+#     ports:
+#       - 5672:5672
     networks:
       - network-backend
 
@@ -63,6 +75,10 @@ services:
       context: .
       dockerfile: Dockerfile.nginx
     restart: always
+    depoly:
+      resources:
+        limits:
+          memory: 512M
     environment:
       API_URL: "http://backend:8000"
       GOOGLE_TRACKING_ID: ""
@@ -79,6 +95,10 @@ services:
   postgres:
     image: postgres:13.3-alpine
     restart: always
+    deploy:
+      resources:
+        limits:
+          memory: 512M
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
