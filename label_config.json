@@ -1,0 +1,18 @@
+[
+  {
+    "id": 44,
+    "text": "描述性(針對事件)",
+    "prefixKey": null,
+    "suffixKey": null,
+    "backgroundColor": "#73D8FF",
+    "textColor": "#ffffff"
+  },
+  {
+    "id": 45,
+    "text": "評價性(針對自我)",
+    "prefixKey": null,
+    "suffixKey": null,
+    "backgroundColor": "#9F0500",
+    "textColor": "#ffffff"
+  }
+]
