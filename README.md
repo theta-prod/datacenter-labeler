@@ -8,7 +8,7 @@
 # Setup Config
 ```
   1. copy .env.example
-  2. typing "admin:password" in flow auth
+  2. typing "admin:password" in flower auth
 ```
 
 # Server Up
