@@ -5,9 +5,16 @@
 資料庫:django + admin + Sql-lite
 
 
-# 啟動腳本
+# Setup Config
 ```
-  sudo docker-compose up --build -d 
+  1. copy .env.example
+  2. typing "admin:password" in flow auth
+```
+
+# Server Up
+```
+  1. docker-compose pull
+  2. docker-compose up -d
 ```
 
 
